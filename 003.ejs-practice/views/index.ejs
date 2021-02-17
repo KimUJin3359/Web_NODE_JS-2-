@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% for(let i = 0; i < locals.data.length; i++) { %>
+        <div>
+        <%= locals.data[i] * 3 %>
+        </div>
+    <% } %>
+    </br>
+
+    <% const dataArray = [{id: 1, text: "데이터1입니다."}, {id: 2, text: "데이터2입니다."}] %>
+    <% dataArray.forEach(e => { %>
+        <div>
+            <span>
+                <%= "id : " + e.id %>
+            </span>
+            <span>
+                <%= e.text %>
+            </span>
+        </div>
+    <% }); %>
+</body>
+</html>
